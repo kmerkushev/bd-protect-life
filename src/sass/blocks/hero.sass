@@ -1,0 +1,396 @@
+.hero
+  padding: 30px 0 0 30px
+  display: flex
+  justify-content: center
+  background-color: #030303
+  position: relative
+  z-index: 1
+  background-image: url('img/bg--pixel.svg')
+  background-repeat: no-repeat
+  background-position: center
+  overflow: hidden
+
+  &::before
+    content: ''
+    width: 100%
+    position: absolute
+    top: 0
+    z-index: -1
+    background-image: url('img/bg--spot.svg')
+    background-repeat: no-repeat
+    background-position: top center
+    background-size: 80%
+    width: 80%
+    height: 80%
+
+  &::after
+    content: ''
+    width: 100%
+    position: absolute
+    z-index: -1
+    bottom: 0
+    background-color: rgba(0,0,0,0.5)
+    border-top: 1px solid #8A8A8A
+    border-bottom: 1px solid #8A8A8A
+    height: 122px
+    box-sizing: border-box
+    left: 0
+
+  &__inner
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    max-width: 1320px
+    gap: 160px
+    width: 100%
+    position: relative
+
+    &::after
+      content: ""
+      position: absolute
+      z-index: -1
+      bottom: 0
+      right: 0
+      background-image: url(img/stone-phone.png)
+      background-repeat: no-repeat
+      width: 690px
+      height: 100%
+      background-size: 100%
+      background-position: right 62px
+      transform: translateX(100px)
+
+
+  &__top
+    display: flex
+    justify-content: space-between
+    padding-right: 30px
+
+  &__menu-btn,
+  &__menu-btn--close
+    display: none
+
+  &__links
+    list-style-type: none
+    padding-left: 0
+    display: flex
+    gap: 50px
+
+  &__link a
+    color: var(--white)
+    font-size: 18px
+    font-weight: 400
+    text-decoration: none
+    transition: all 0.3s ease
+
+    &:hover
+      @media #{$mouse-device}
+        color: var(--orange--dark)
+
+    &:active
+      color: var(--orange--dark)
+
+  &__headings
+    display: flex
+    flex-direction: column
+    gap: 36px
+
+  &__h1
+    font-size: 64px
+    font-weight: 800
+    line-height: 90%
+    color: var(--white)
+    margin: 0
+
+    &--orange
+      color: var(--orange)
+
+  &__h2
+    font-size: 30px
+    font-weight: 600
+    line-height: 90%
+    color: var(--white)
+    margin: 0
+
+  &__h3
+    font-size: 22px
+    font-weight: 400
+    line-height: 125%
+    color: var(--white)
+    margin: 0
+
+  &__bottom
+    display: flex
+    padding-bottom: 22px
+    justify-content: space-between
+    align-items: center
+    gap: 30px
+    padding-right: 30px
+
+  &__btns
+    display: flex
+    gap: 30px
+    flex-shrink: 0
+
+  &__button
+    flex-shrink: 0
+
+  &__main
+    display: flex
+    flex-direction: column
+    gap: 60px
+
+
+@media screen and (max-width: 1200px)
+  .hero
+    &__inner::after
+      background-position: 130px 62px
+
+@media screen and (max-width: 1040px)
+  .hero
+    &__h1
+      font-size: 52px
+
+    &__h2
+      font-size: 24px
+
+    &__h3
+      font-size: 16px
+
+    &__bottom
+      gap: 20px
+
+    &__btns
+      gap: 20px
+
+@media screen and (max-width: 840px)
+  .hero
+    &__inner::after
+      background-position: 130px 62px
+
+    &__link a
+      font-size: 16px
+
+    &__links
+      gap: 40px
+
+@media screen and (max-width: 767px)
+  .hero
+    &::after
+      height: 106px
+
+  
+@media screen and (max-width: 750px)
+  .hero
+    &::after
+      display: none
+
+    &__inner
+      gap: 40px
+
+      &::after
+        background-position: 60px 40px
+        width: 550px
+
+    &__h1
+      font-size: 42px
+
+    &__h2
+      font-size: 22px
+
+    &__h3
+      max-width: 400px
+
+    &__bottom
+      flex-direction: column
+      align-items: flex-start
+
+    &__main
+      gap: 30px
+
+@media screen and (max-width: 700px)
+  .hero
+    &__nav
+      display: none
+
+
+@media screen and (max-width: 670px)
+  .hero
+
+    &__top
+      justify-content: space-between
+      align-items: center
+      width: 100%
+      padding-right: 30px
+
+      & img
+        margin-right: 30px
+
+    &__inner::after
+      background-position: 80px 0px
+
+    &__menu-btn
+      width: 40px
+      height: 28px
+      background-color: transparent
+      background-image: url('img/btn--menu.svg')
+      background-repeat: no-repeat
+      border: none
+      display: block
+
+    &__menu-btn--close
+      display: block
+
+    &__nav.opened
+      display: flex
+      justify-content: center
+      align-items: center
+      position: fixed
+      top: 0
+      left: 0
+      width: calc(100% + 30px)
+      z-index: 9
+      background-color: rgba(0, 0, 0, 0.5)
+      margin: -30px
+      padding-top: 30px
+      padding-bottom: 30px
+      backdrop-filter: blur(71px)
+      height: 100%
+
+    &__menu-btn--close
+      content: ''
+      position: absolute
+      width: 30px
+      height: 30px
+      background-color: transparent
+      background-image: url('img/btn--menu-close.svg')
+      background-repeat: no-repeat
+      background-size: 100%
+      top: 50px
+      right: 20px
+      border: none
+
+
+    &__links
+      flex-direction: column
+      align-items: center
+      gap: 30px
+
+    .hero__link a
+        font-size: 21px
+
+
+      
+
+@media screen and (max-width: 600px)
+  .hero
+    &__h1,
+    &__h2,
+    &__h3
+      text-align: center
+
+    &__bottom
+      align-items: center
+
+    &__inner
+      gap: 340px
+
+    &__inner::after
+      background-position: center top
+      transform: translateX(20px)
+
+
+@media screen and (max-width: 600px)
+  .hero
+    &__inner::after
+      transform: translateX(60px)
+
+    &__main
+      margin-left: -30px
+      margin-right: -30px
+      padding-left: 20px
+      padding-right: 20px
+      background-color: #030303
+
+    &__headings
+      padding-right: 30px
+      position: relative
+      z-index: 1
+
+      &::after
+        content: ''
+        position: absolute
+        top: -220px
+        left: -20px
+        z-index: -1
+        background-image: url('img/bg--shadow.svg')
+        background-repeat: no-repeat
+        width: 120%
+        height: 600px
+
+    &__bottom
+      padding-right: 30px
+      z-index: 1
+
+
+@media screen and (max-width: 480px)
+  .hero
+    padding: 20px 20px 0 20px
+
+    &__top
+      padding-right: 0px
+
+      & img
+        width: 46px
+        margin: 0
+
+    &__main
+      margin-left: -20px
+      margin-right: -20px
+      padding-left: 20px
+      padding-right: 20px
+      gap: 20px
+
+    &__inner::after
+      transform: translateX(80px)
+
+    &__h1
+      font-size: 36px
+
+    &__h2
+      font-weight: 400
+      transform: translateY(-20px)
+
+    &__headings
+      gap: 0
+      padding-right: 0
+    
+    &__bottom
+      padding-right: 0
+
+    &__br
+      display: none
+
+    &__btns
+      flex-wrap: wrap
+      justify-content: center
+
+    & .button
+      font-size: 18px
+
+
+@media screen and (max-width: 450px)
+  .hero
+    &__inner::after
+      transform: translateX(100px)
+
+
+@media screen and (max-width: 390px)
+  .hero
+    &__inner::after
+      transform: translateX(140px)     
+
+
+@media screen and (max-width: 340px)
+  .hero
+    &__inner::after
+      transform: translateX(140px)  

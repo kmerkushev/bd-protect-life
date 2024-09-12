@@ -1,0 +1,505 @@
+.prices 
+  gap: 10px
+  background-color: #212121
+  flex-direction: column
+  justify-content: flex-start
+  align-items: center
+  width: 100%
+  padding: 160px 30px
+  text-decoration: none
+  display: flex
+  background-image: url('img/bg--prices.png')
+  background-size: 100%
+  background-repeat: no-repeat
+  background-position: center
+  box-sizing: border-box
+
+
+.prices__inner 
+  gap: 90px
+  flex-direction: column
+  justify-content: flex-start
+  align-items: center
+  text-decoration: none
+  display: flex
+
+.prices__h2
+  color: #ffffff
+  text-align: center
+  letter-spacing: -.04em
+  margin-top: 0
+  margin-bottom: 0
+  font-family: Manrope, sans-serif
+  font-size: 80px
+  font-weight: 800
+  line-height: 95%
+  text-decoration: none
+
+  &--orange
+    color: #ff5d01
+
+  .prices__br
+    
+
+
+.prices__plans 
+  gap: 30px
+  flex: 0 auto
+  justify-content: center
+  align-items: center
+  text-decoration: none
+  display: flex
+
+
+.plan 
+  background-color: #fff
+  border-radius: 20px
+  flex-direction: column
+  justify-content: flex-start
+  align-items: flex-start
+  width: 100%
+  max-width: 400px
+  text-decoration: none
+  display: flex
+  
+
+  &--best
+    position: relative
+
+    &::before
+      content: 'Best offer'
+      font-size: 16px
+      color: var(--white)
+      position: absolute
+      text-align: center
+      top: 15px
+      right: 15px
+      border-radius: 20px
+      padding: 10px 16px
+      background-color: var(--green)
+  
+    & .plan__h3
+      padding-top: 50px
+      font-size: 42px
+
+.plan__top 
+  flex-direction: column
+  justify-content: flex-start
+  align-items: flex-start
+  width: 100%
+  text-decoration: none
+  display: flex
+
+
+.plan__h3-container 
+  gap: 10px
+  justify-content: center
+  align-items: center
+  width: 100%
+  max-width: 400px
+  padding-top: 35px
+  padding-bottom: 35px
+  text-decoration: none
+  border-radius: 20px 20px 0 0
+  display: flex
+  background-color: var(--white)
+
+
+.plan__h3 
+  color: #1b1a1c
+  text-align: center
+  margin-top: 0
+  margin-bottom: 0
+  font-size: 28px
+  font-weight: 400
+  line-height: 95%
+  text-decoration: none
+
+  &--bold
+    font-weight: 800
+
+
+.plan__prices 
+  background-color: #d9d9d9
+  justify-content: space-between
+  align-items: baseline
+  width: 100%
+  max-width: 400px
+  padding: 25px
+  text-decoration: none
+  display: flex
+  box-sizing: border-box
+
+.plan__price
+  &--orange
+    color: var(--orange--dark)
+
+.plan__price-month
+  font-size: 44px
+  font-weight: 700
+  color: var(--black)
+  margin: 0
+
+  & .plan__price-period
+    font-size: 22px
+    font-weight: 400
+
+  &--orange
+    color: var(--orange--dark)
+
+.plan__price-dollars
+  font-size: 21px
+  font-weight: 600
+  color: var(--black)
+  margin: 0
+
+  & .plan__price-period
+    font-size: 21px
+    font-weight: 600
+
+
+.plan__bottom 
+  gap: 40px
+  background-color: #f2f2f2
+  flex-direction: column
+  justify-content: flex-start
+  align-items: center
+  width: 100%
+  padding: 40px 25px 30px 25px
+  text-decoration: none
+  display: flex
+  position: relative
+  box-sizing: border-box
+  border-radius: 0 0 20px 20px
+
+
+.plan__features-container 
+  grid-row-gap: 24px
+  flex-direction: column
+  justify-content: flex-start
+  align-items: flex-start
+  width: 100%
+  max-width: 349px
+  text-decoration: none
+  display: flex
+
+
+.plan__h4 
+  color: #3b3b3b
+  margin-top: 0
+  margin-bottom: 0
+  font-family: Manrope, sans-serif
+  font-size: 20px
+  font-weight: 800
+  line-height: 95%
+  text-decoration: none
+
+
+.plan__features 
+  grid-row-gap: 18px
+  flex-direction: column
+  justify-content: flex-start
+  align-items: flex-start
+  width: 100%
+  text-decoration: none
+  display: flex
+
+
+.plan__feature 
+  grid-column-gap: 12px
+  justify-content: flex-start
+  align-items: center
+  width: 100%
+  text-decoration: none
+  display: flex
+
+
+.plan__gift 
+  background-color: #e1e1e1
+  border-radius: 20px
+  justify-content: center
+  align-items: center
+  width: 100%
+  padding-top: 35px
+  padding-bottom: 35px
+  text-decoration: none
+  display: flex
+  position: relative
+
+  &::before
+    content: ''
+    position: absolute
+    top: -21px
+    left: calc(50% - 21px)
+    background-image: url('img/icon--plus.svg')
+    background-repeat: no-repeat
+    width: 42px
+    height: 42px
+
+
+.plan__gift-text 
+  color: #3b3b3b
+  text-align: center
+  margin-top: 0
+  margin-bottom: 0
+  font-size: 18px
+  font-weight: 400
+  line-height: 135%
+  text-decoration: none
+
+  &--bold
+    font-weight: 600
+
+
+.plan__button
+  background-color: #212121
+
+
+
+.plan__tag--best 
+  grid-column-gap: 10px
+  background-color: #2dcf21
+  border-radius: 60px
+  flex: 0 auto
+  justify-content: flex-start
+  align-items: center
+  padding: 12px 16px
+  text-decoration: none
+  display: flex
+
+
+.plan__middle 
+  grid-row-gap: 50px
+  background-color: #fff
+  border-bottom-right-radius: 30px
+  border-bottom-left-radius: 30px
+  flex-direction: column
+  justify-content: flex-start
+  align-items: flex-start
+  width: 100%
+  padding-left: 25px
+  padding-right: 25px
+  text-decoration: none
+  display: flex
+
+
+.plan__caption 
+  color: #3b3b3b
+  text-align: center
+  margin-top: -20px
+  margin-bottom: 0
+  font-size: 17px
+  font-weight: 400
+  line-height: 135%
+  text-decoration: none
+
+  &--bold
+    font-weight: 600
+
+
+.plan__feature-text
+  position: relative
+  padding-left: 36px
+  color: #3b3b3b
+  margin: 0
+  font-family: Manrope, sans-serif
+  font-size: 18px
+  font-weight: 400
+  line-height: 95%
+  text-decoration: none
+
+  &::before
+    content: ''
+    position: absolute
+    left: 0
+    top: -4px
+    background-image: url('img/icon--check.svg')
+    background-repeat: no-repeat
+    width: 24px
+    height: 24px
+
+
+
+@media screen and (min-width: 1279px) 
+  .prices 
+    justify-content: flex-start
+    align-items: center
+    padding: 160px 0
+
+  .prices__inner
+    gap: 70px
+
+  .prices__h2
+    font-size: 64px
+  
+
+
+@media screen and (min-width: 1440px) 
+  .prices 
+    padding: 160px 0
+
+
+
+@media screen and (max-width: 1250px) 
+  .prices 
+
+  .plan__prices
+    flex-direction: row
+    justify-content: space-between
+    align-items: baseline
+    padding: 15px
+
+  .plan--best .plan__h3
+    font-size: 36px
+
+  .plan__h3
+    font-size: 28px
+
+  .plan__price-month
+    font-size: 32px
+
+  .plan__h3-container
+    padding-bottom: 20px
+
+  .plan__price-dollars,
+  .plan__price-dollars .plan__price-period
+    font-size: 18px
+    font-weight: 400
+
+
+  .plan__h4
+    font-size: 18px
+
+  .plan__feature-text
+    font-size: 17px
+
+  .plan--best::before
+    font-size: 14px
+
+  .plan--best .plan__h3
+    padding-top: 40px
+
+
+@media screen and (max-width: 1060px) 
+  .plan__prices
+    flex-direction: column
+    justify-content: space-between
+    align-items: center
+    padding: 15px
+
+
+@media screen and (max-width: 991px) 
+  .prices 
+    max-width: 100%
+    height: auto
+    padding-bottom: 160px
+    background-position: top center
+
+  .prices__br
+    display: none
+
+  .prices__h2
+    font-size: 48px
+  
+
+  .prices__plans 
+    gap: 30px
+    flex-flow: column
+    justify-content: flex-start
+    align-items: center
+  
+
+
+@media screen and (max-width: 767px) 
+  .prices 
+    padding-top: 80px
+    padding-bottom: 80px
+  
+
+  .prices__inner 
+    grid-column-gap: 30px
+    grid-row-gap: 30px
+  
+
+@media screen and (max-width: 479px)
+  .prices __h2
+    font-size: 36px
+
+  .plan__h3
+    font-size: 21px
+
+  .plan__prices
+    flex-direction: row
+    align-items: baseline
+    justify-content: space-between
+
+  .prices
+    padding: 80px 20px
+
+    &__h2
+      font-size: 36px
+
+  .plan
+
+    &__prices
+      flex-direction: row
+      align-items: baseline
+
+    &--best::before
+        font-size: 12px
+        padding: 9px
+
+    &__h3
+      font-size: 21px
+
+    &__h4,
+    &__price-dollars,
+    &__price-dollars &__price-period
+      font-size: 16px
+
+    &__price-period
+      color: #494949
+
+    &__price-month
+      font-size: 36px
+
+    &__price-period
+      font-size: 18px
+    
+    &__price-dollars,
+    &__price-dollars &__price-period
+      color: #1B1A1C
+      font-weight: 600
+
+    &__features-container
+      gap: 18px
+
+    &__feature-text
+      font-size: 15px
+      padding-left: 30px
+      color: #3B3B3B
+
+      &::before
+        width: 20px
+        height: 20px
+        background-size: 20px
+
+    &__gift
+      padding: 24px 0px
+
+      &::before
+        width: 32px
+        height: 32px
+        background-size: 32px
+        top: -16px
+        left: calc(50% - 16px)
+
+    &__gift-text
+      font-size: 15px
+
+    &__bottom
+      gap: 26px
+
+    &__caption
+      font-size: 14px
+      margin-top: -10px

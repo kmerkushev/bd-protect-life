@@ -1,0 +1,259 @@
+.faq 
+  gap: 10px
+  background-color: #ededed
+  flex-direction: column
+  justify-content: flex-start
+  align-items: center
+  width: 100%
+  padding: 160px 30px
+  text-decoration: none
+  display: flex
+  box-sizing: border-box
+  position: relative
+  overflow-x: hidden
+
+
+  &::before
+    content: ''
+    position: absolute
+    background-image: url('img/bg--magnifier.svg')
+    background-repeat: no-repeat
+    background-position: top left
+    z-index: 0
+    top: 90px
+    left: calc(50% - 600px)
+    background-size: 100%
+    width: 305px
+    height: 395px
+
+  &::after
+    content: ""
+    position: absolute
+    background-image: url(img/bg--question.svg)
+    background-repeat: no-repeat
+    background-position: bottom right
+    z-index: 0
+    top: 60px
+    right: calc(50% - 730px)
+    background-size: 100%
+    width: 440px
+    height: 660px
+
+
+.faq__inner 
+  grid-row-gap: 60px
+  flex-direction: column
+  justify-content: flex-start
+  align-items: center
+  width: 100%
+  max-width: 1260px
+  text-decoration: none
+  display: flex
+  z-index: 1
+
+
+.faq__h2 
+  color: #030303
+  text-align: center
+  letter-spacing: -.04em
+  margin-top: 0
+  margin-bottom: 0
+  font-family: Manrope, sans-serif
+  font-size: 80px
+  font-weight: 800
+  line-height: 95%
+  text-decoration: none
+
+
+.faq__questions 
+  flex-direction: column
+  justify-content: flex-start
+  align-items: center
+  width: 100%
+  text-decoration: none
+  display: flex
+  max-width: 740px
+
+
+.faq__item 
+  grid-column-gap: 30px
+  border: 1px solid #d4d4d4
+  border-width: 1px 0
+  justify-content: flex-start
+  align-items: center
+  width: 100%
+  padding: 30px
+  text-decoration: none
+  display: flex
+  box-sizing: border-box
+  margin-top: -1px
+
+  &:first-of-type
+    margin-top: 0
+
+
+.faq__question 
+  justify-content: space-between
+  align-items: center
+  width: 100%
+  text-decoration: none
+  display: flex
+
+
+.faq__text 
+  color: #1b1a1c
+  margin-top: 0
+  margin-bottom: 0
+  font-family: Manrope, sans-serif
+  font-size: 36px
+  font-weight: 400
+  line-height: 126.5%
+  text-decoration: none
+
+
+.faq__arrow
+  justify-content: center
+  align-items: center
+  width: 42px
+  text-decoration: none
+  display: flex
+
+
+.faq__item--opened 
+  grid-row-gap: 30px
+  border: 1px solid #d4d4d4
+  border-width: 1px 0
+  flex-direction: column
+  justify-content: center
+  align-items: flex-start
+  width: 100%
+  padding: 30px
+  text-decoration: none
+  display: flex
+
+
+.faq__answer 
+  color: #1b1a1c
+  margin-top: 0
+  margin-bottom: 0
+  font-family: Manrope, sans-serif
+  font-size: 26px
+  font-weight: 400
+  line-height: 126.5%
+  text-decoration: none
+  max-width: 80%
+
+
+
+
+@media screen and (max-width: 1300px) 
+  .faq::before
+    top: 90px
+    left: calc(50% - 550px)
+    background-size: 100%
+    width: 250px
+    height: 250px
+
+
+@media screen and (max-width: 991px)
+  .faq::before
+    top: 120px
+    left: calc(50% - 440px)
+    background-size: 100%
+    width: 250px
+    height: 250px
+
+  .faq::after
+      right: calc(50% - 540px)
+
+
+  .faq__h2 
+    font-size: 64px
+  
+
+  .faq__text 
+    font-size: 28px
+  
+
+  .faq__answer 
+    font-size: 18px
+  
+
+
+@media screen and (max-width: 767px) 
+ 
+  .faq 
+    padding: 60px 20px
+
+  .faq::before
+    top: 70px
+    left: calc(50% - 380px)
+    width: 210px
+
+  .faq::after
+    top: -160px
+    right: calc(50% - 730px)
+    width: 300px
+    right: calc(50% - 440px)
+  
+
+  .faq__inner 
+    grid-row-gap: 40px
+  
+
+  .faq__h2 
+    font-size: 36px
+  
+
+  .faq__item 
+    padding: 25px 10px
+  
+
+  .faq__text 
+    font-size: 18px
+  
+
+  .faq__item--opened 
+    grid-column-gap: 10px
+    grid-row-gap: 10px
+    padding: 25px 10px
+  
+
+  .faq__answer 
+    font-size: 14px
+
+  .faq__arrow
+    width: 22px
+
+
+
+@media screen and (max-width: 640px) 
+  .faq 
+    padding: 70px 20px
+
+  .faq::before
+      top: 60px
+      left: calc(50% - 270px)
+      width: 180px
+
+  .faq::after
+    top: -160px
+    width: 300px
+    right: calc(50% - 330px)
+
+
+@media screen and (max-width: 460px)
+  .faq::before
+      top: 50px
+      left: calc(50% - 220px)
+
+  .faq::after
+    top: -160px
+    right: calc(50% - 300px)
+    width: 270px
+
+@media screen and (max-width: 390px)
+  .faq::before
+      top: 50px
+      left: calc(50% - 200px)
+      width: 160px

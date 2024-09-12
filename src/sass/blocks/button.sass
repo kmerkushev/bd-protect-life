@@ -1,0 +1,116 @@
+.button
+    font-family: Manrope, sans-serif
+    font-size: 24px
+    font-weight: 700
+    text-decoration: none
+    border-radius: 10px
+    padding: 20px 26px
+    text-align: center
+    transition: all 0.3s ease
+    text-decoration: none
+    color: var(--white)
+    flex-shrink: 0
+    
+    &--orange
+        color: var(--white)
+        background-color: var(--orange)
+        border: 4px solid var(--orange)
+
+        &:hover
+            @media #{$mouse-device}
+                background-color: var(--orange--dark)
+                border: 4px solid var(--orange--dark)
+                cursor: pointer
+                transform: translate(0, -6px)
+
+        &:active
+            background-color: var(--orange--dark)
+            border: 4px solid var(--orange--dark)
+            cursor: pointer
+            transform: translate(0, -6px)
+
+    &--black
+        color: var(--white)
+        background-color: var(--black)
+        transition: all 0.3s ease
+        border: 4px solid var(--black)
+
+        &:hover
+            @media #{$mouse-device}
+                background-color: var(--orange--dark)
+                border: 4px solid var(--orange--dark)
+                transform: translate(0, -6px)
+
+        &:active
+            background-color: var(--orange--dark)
+            border: 4px solid var(--orange--dark)
+            transform: translate(0, -6px)
+
+    &--border
+        border: 4px solid var(--white)
+
+        &:hover
+            @media #{$mouse-device}
+                border: 4px solid var(--orange--dark)
+                background-color: var(--orange--dark)
+                color: var(--white)
+                transform: translate(0, -6px)
+
+        &:active
+            border: 4px solid var(--orange--dark)
+            background-color: var(--orange--dark)
+            color: var(--white)
+            transform: translate(0, -6px)
+
+    &--medium
+        font-size: 18px
+        font-weight: 600
+        padding: 25px 0
+        width: 100%
+        box-sizing: border-box
+
+
+    &--small
+        border-radius: 60px
+        padding: 8px 26px
+        font-size: 15px
+        font-weight: 500
+        background-color: var(--orange)
+
+        &:hover
+            @media #{$mouse-device}
+                transform: translate(0, -4px)
+
+        &:active
+            transform: none
+            transform: translate(0, -4px)
+
+
+@media screen and (max-width: 991px) 
+    .button
+        font-size: 18px
+
+
+
+@media screen and (max-width: 767px)
+    .button
+        font-size: 16px
+        padding: 16px 22px
+
+        &--border
+            border: 3px solid var(--white)
+        
+        &--black
+            border: 3px solid var(--black)
+
+        &--small
+            padding-top: 5px
+            padding-bottom: 5px
+
+
+@media screen and (max-width: 479px)
+    .button
+        font-size: 16px
+
+        &--small
+            font-size: 16px
