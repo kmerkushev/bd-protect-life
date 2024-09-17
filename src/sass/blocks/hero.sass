@@ -36,6 +36,28 @@
     box-sizing: border-box
     left: 0
 
+  &__spot
+    content: ""
+    width: 100%
+    position: absolute
+    top: 0
+    left: 0
+    z-index: -1
+    background-image: url(img/bg--spot.svg)
+    background-repeat: no-repeat
+    background-position: top center
+    background-size: 80%
+    width: 80%
+    height: 80%
+    animation: 2s spot-move ease forwards
+
+  @keyframes spot-move
+    0%
+      top: -80%
+
+    100%
+      top: 0
+
   &__inner
     display: flex
     flex-direction: column
@@ -56,7 +78,7 @@
       width: 690px
       height: 100%
       background-size: 100%
-      background-position: right 62px
+      background-position: right 76px
       transform: translateX(100px)
 
 
@@ -92,7 +114,7 @@
   &__headings
     display: flex
     flex-direction: column
-    gap: 36px
+    gap: 60px
 
   &__h1
     font-size: 64px
@@ -106,23 +128,23 @@
 
   &__h2
     font-size: 30px
-    font-weight: 600
+    font-weight: 200
     line-height: 90%
     color: var(--white)
     margin: 0
 
   &__h3
-    font-size: 22px
-    font-weight: 400
+    font-size: 20px
+    font-weight: 200
     line-height: 125%
     color: var(--white)
     margin: 0
-    max-width: 600px
+    max-width: 345px
 
   &__bottom
     display: flex
     padding-bottom: 22px
-    justify-content: space-between
+    justify-content: flex-start
     align-items: center
     gap: 30px
     padding-right: 30px

@@ -55,6 +55,9 @@
       &:active
         color: var(--orange)
 
+    &--bold
+      font-weight: 600
+
   &__panel
     color: var(--black)
     padding: 0 30px
@@ -62,7 +65,14 @@
     overflow: hidden
     transition: all 0.3s ease-out
     display: flex
+    flex-direction: column
     justify-content: flex-start
+
+    & li + li
+      margin-top: 8px
+
+    & p + p
+      margin-top: 18px
 
 
 .active, .accordion__btn:active

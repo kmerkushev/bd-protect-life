@@ -24,7 +24,7 @@
 
 
 .control__h2 
-  color: #030303
+  color: #171717
   text-align: center
   letter-spacing: -.04em
   margin-top: 0
@@ -40,16 +40,19 @@
 
 
 .control__h3 
-  color: #000
+  color: #171717
   text-align: center
   margin-top: 0
   margin-bottom: 0
   font-family: Manrope, sans-serif
   font-size: 36px
-  font-weight: 600
-  line-height: 129.5%
+  font-weight: 800
+  line-height: 120%
   text-decoration: none
+  max-width: 740px
 
+  &--orange
+    color: var(--orange)
 
 .control__cards 
   grid-row-gap: 20px
@@ -58,6 +61,11 @@
   align-items: flex-start
   text-decoration: none
   display: flex
+
+.control__chip img
+  width: 72px
+  height: 36px
+  transform: translateY(6px)
 
 
 .control__problem 
@@ -88,8 +96,8 @@
   margin-top: 0
   margin-bottom: 0
   font-family: Manrope, sans-serif
-  font-size: 24px
-  font-weight: 500
+  font-size: 23px
+  font-weight: 600
   line-height: 126.5%
   text-decoration: none
 
@@ -145,7 +153,7 @@
   color: #1b1a1c
   margin-top: 0
   margin-bottom: 0
-  font-size: 18px
+  font-size: 15px
   font-weight: 400
   line-height: 126.5%
   text-decoration: none
@@ -182,7 +190,18 @@
   height: 35px
   text-decoration: none
   display: flex
-  transform: translateY(20px)
+  animation: 1.5s scroll-down ease infinite
+
+
+@keyframes scroll-down
+  0%
+    transform: translateY(0px)
+
+  50%
+    transform: translateY(20px)
+
+  100%
+    transform: translateY(0px)
 
 
 .control__fact-h2-0 
@@ -273,17 +292,20 @@
     padding-top: 100px
     padding-bottom: 100px
   
-
   .control__h2 
     font-size: 64px
   
-
   .control__h3 
     font-size: 28px
-  
+    max-width: 620px
 
   .control__problem-p 
     font-size: 24px
+
+  .control__chip img
+    width: 68px
+    height: auto
+    transform: translateY(10px)
   
 
 
@@ -304,7 +326,12 @@
   .control__h3 
     margin-top: 0
     font-size: 18px
-  
+    max-width: 420px  
+    
+  .control__chip img
+    width: 60px
+    transform: translateY(8px)
+
 
   .control__cards 
     margin-bottom: 30px
