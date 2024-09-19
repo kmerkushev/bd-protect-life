@@ -238,7 +238,7 @@
 
     &__top
       justify-content: space-between
-      align-items: center
+      align-items: flex-start
       width: 100%
       padding-right: 30px
 
@@ -249,10 +249,10 @@
       background-position: 80px 0px
 
     &__menu-btn
-      width: 40px
-      height: 28px
+      width: 60px
+      height: 239px
       background-color: transparent
-      background-image: url('img/btn--menu.svg')
+      background-image: url('img/icon--menu-open-long.svg')
       background-repeat: no-repeat
       border: none
       display: block
@@ -284,15 +284,28 @@
       display: flex
       align-items: center
       justify-content: center
-      width: 36px
-      height: 36px
+      width: 120px
+      height: 120px
       background-color: transparent
-      background-image: url('img/icon--menu-close.svg')
+      background-image: url('img/icon--menu-close--big.svg')
       background-repeat: no-repeat
       background-size: 100%
-      top: 50px
-      right: 20px
+      top: 60px
+      left: 60px
       border: none
+
+      &::after
+        content: "CLOSE"
+        position: absolute
+        top: 130px
+        left: 32px
+        font-size: 14px
+        color: #ffffff
+        z-index: 999
+        letter-spacing: 3px
+        opacity: 0
+        animation: 0.5s $menu-ease 0.8s show-caption forwards
+        
 
 
     &__links
@@ -405,6 +418,9 @@
     &__nav.opened li
       transform: translate(-100px -30px)
 
+    &__links
+      margin-right: 30px
+
 
 
 @media screen and (max-width: 450px)
@@ -430,8 +446,7 @@
 
 
     &__nav.opened li
-      opacity: 0
-      
+      opacity: 0      
 
       &:nth-of-type(1) 
         animation: $menu-time $menu-ease menu-item-slide forwards
@@ -483,3 +498,12 @@
 
   100%
     backdrop-filter: blur(70px)
+
+@keyframes show-caption
+  0%
+    opacity: 0
+    transform: translateY(-10px)
+
+  100%
+    opacity: 1
+    transform: translateY(0px)
