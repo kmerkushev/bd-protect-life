@@ -230,14 +230,11 @@
     &__main
       gap: 30px
 
-@media screen and (max-width: 700px)
-  .hero
-    &__nav
-      display: none
-
 
 @media screen and (max-width: 670px)
   .hero
+    &__nav
+          display: none
 
     &__top
       justify-content: space-between
@@ -266,26 +263,31 @@
     &__nav.opened
       display: flex
       justify-content: center
-      align-items: center
+      align-items: flex-end
       position: fixed
       top: 0
       left: 0
       width: calc(100% + 30px)
+      height: calc(100% + 30px)
       z-index: 9
       background-color: rgba(0, 0, 0, 0.5)
       margin: -30px
       padding-top: 30px
-      padding-bottom: 30px
-      backdrop-filter: blur(71px)
-      height: 100%
+      padding-bottom: 50px
+      backdrop-filter: blur(70px)
+      box-sizing: border-box
+      
 
     &__menu-btn--close
       content: ''
       position: absolute
-      width: 30px
-      height: 30px
+      display: flex
+      align-items: center
+      justify-content: center
+      width: 36px
+      height: 36px
       background-color: transparent
-      background-image: url('img/btn--menu-close.svg')
+      background-image: url('img/icon--menu-close.svg')
       background-repeat: no-repeat
       background-size: 100%
       top: 50px
@@ -295,31 +297,15 @@
 
     &__links
       flex-direction: column
-      align-items: center
+      align-items: flex-end
       gap: 30px
+      margin: 0
 
     .hero__link a
-        font-size: 21px
+        font-size: 38px
+        font-weight: 200
 
 
-      
-
-@media screen and (max-width: 600px)
-  .hero
-    &__h1,
-    &__h2,
-    &__h3
-      text-align: center
-
-    &__bottom
-      align-items: center
-
-    &__inner
-      gap: 340px
-
-    &__inner::after
-      background-position: center top
-      transform: translateX(20px)
 
 
 @media screen and (max-width: 600px)
@@ -354,6 +340,21 @@
       padding-right: 30px
       z-index: 1
 
+    &__h1,
+    &__h2,
+    &__h3
+      text-align: center
+
+    &__bottom
+      align-items: center
+
+    &__inner
+      gap: 340px
+
+    &__inner::after
+      background-position: center top
+      transform: translateX(20px)
+
 
 @media screen and (max-width: 480px)
   .hero
@@ -364,6 +365,7 @@
 
       & img
         width: 46px
+        height: auto
         margin: 0
 
     &__main
@@ -400,6 +402,10 @@
     & .button
       font-size: 18px
 
+    &__nav.opened li
+      transform: translate(-100px -30px)
+
+
 
 @media screen and (max-width: 450px)
   .hero
@@ -413,7 +419,67 @@
       transform: translateX(140px)     
 
 
-@media screen and (max-width: 340px)
+@media screen and (max-width: 480px)
   .hero
     &__inner::after
       transform: translateX(140px)  
+
+    &__nav.opened
+      backdrop-filter: blur(0px)
+      animation: 1s linear menu-blur forwards
+
+
+    &__nav.opened li
+      opacity: 0
+      
+
+      &:nth-of-type(1) 
+        animation: $menu-time $menu-ease menu-item-slide forwards
+        
+      &:nth-of-type(2) 
+        animation: $menu-time $menu-ease 0.04s menu-item-slide forwards
+        
+      &:nth-of-type(3) 
+        animation: $menu-time $menu-ease 0.08s menu-item-slide forwards
+        
+      &:nth-of-type(4) 
+        animation: $menu-time $menu-ease 0.12s menu-item-slide forwards
+        
+      &:nth-of-type(5) 
+        animation: $menu-time $menu-ease 0.16s menu-item-slide forwards
+        
+      &:nth-of-type(6) 
+        animation: $menu-time $menu-ease 0.20s menu-item-slide forwards
+
+    &__menu-btn--close
+      opacity: 0
+      animation: 0.8s $menu-ease 0.04s show-cross forwards
+
+
+@keyframes menu-item-slide
+  0%
+
+  100%
+    transform: translate(80px, 30px)
+    opacity: 1
+    letter-spacing: inherit
+
+
+@keyframes show-cross 
+  0%
+    opacity: 0
+    transform: rotate(20deg) translate(80px, 30px)
+
+  90% 
+    opacity: 0.8
+    transform: rotate(-3deg)
+  
+  100%
+    opacity: 0.7
+    transform: rotate(0deg)  translate(0px, 0px)
+
+@keyframes menu-blur
+  0%
+
+  100%
+    backdrop-filter: blur(70px)

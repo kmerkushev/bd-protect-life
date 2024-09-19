@@ -58,3 +58,13 @@ img
 @function darker($color, $tone)
   $adjust: -16*$tone
   @return adjust-color($color, $red: $adjust, $green: $adjust, $blue: $adjust)
+
+
+.highlighted
+  background-color: rgba(0,60,255,0.8)
+  color: #ffffff
+  transition: all 0.3s ease
+
+  &:hover
+    color: inherit
+    background-color: rgba(0,60,255,0)
